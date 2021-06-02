@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WebViewActivity">
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        android:id="@+id/news_cardview"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:id="@+id/news_image"/>-->
+
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:background="#3A3232"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:gravity="bottom"-->
+<!--        android:id="@+id/news_author"-->
+<!--        android:padding="8dp"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:text="Author Name"/>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/news_cardview"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:id="@+id/news_title"-->
+<!--        android:textSize="24dp"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:text="Sample Title News Of Live News India and that gives you daily live news"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/news_title"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:id="@+id/news_description"-->
+<!--        android:textSize="18dp"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:text="Sample Title News Of Live News India and that gives you daily live news"/>-->
+
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/custom_btn_bg"-->
+<!--        android:layout_below="@id/news_description"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:id="@+id/news_publish"-->
+<!--        android:text="Publish Date"-->
+<!--        />-->
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/webview" />
+
+</RelativeLayout>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    tools:context=".CategoryActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selection"
+        android:textSize="20dp"
+
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:text="Select a Category"/>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/toggle"
+            app:track="@drawable/track"
+            android:thumb="@drawable/thumb"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            app:showText="true"
+            android:textOn="On"
+            android:textOff="Off"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/toggle"
+        android:weightSum="1">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/world"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/worldwide"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:text="World News"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+            android:id="@+id/business"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/business"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="25dp"
+                    android:textColor="@android:color/white"
+                    android:text="Business"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center"
+            android:id="@+id/relaxation"
+            android:layout_width="180dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/entertainment"
+                    android:layout_margin="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="25dp"
+                    android:textColor="@android:color/white"
+                    android:text="Relaxation"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+
+            android:id="@+id/science"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/science"
+                    android:layout_margin="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="25dp"
+                    android:textColor="@android:color/white"
+                    android:text="Science"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+            android:id="@+id/covid"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/covid"
+                    android:layout_margin="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="25dp"
+                    android:textColor="@android:color/white"
+                    android:text="Covid - 19"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+
+            android:id="@+id/health"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/health"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="25dp"
+                    android:textColor="@android:color/white"
+                    android:text="Health"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+
+            android:id="@+id/sports"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/football"
+                    android:layout_margin="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="25dp"
+                    android:textColor="@android:color/white"
+                    android:text="Sports"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+            android:id="@+id/technology"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/technology"
+                    android:layout_margin="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="25dp"
+                    android:textColor="@android:color/white"
+                    android:text="Technology"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

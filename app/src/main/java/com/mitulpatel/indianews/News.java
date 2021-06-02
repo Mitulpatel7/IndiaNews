@@ -10,12 +10,50 @@ public class News {
     private String title;
     private String URL;
     private String urlToImage;
+    private String content;
+    private String publishedAt;
+    private String author;
 
-    public News(String title, String url) {
+    public News(String title, String URL, String urlToImage, String content, String publishedAt,String author) {
         this.title = title;
-        this.URL = url;
+        this.URL = URL;
+        this.urlToImage = urlToImage;
+        this.content = content;
+        this.publishedAt = publishedAt;
+        this.author = author;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getURL() {
+        return URL;
+    }
+
+    public void setURL(String URL) {
+        this.URL = URL;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getPublishedAt() {
+        return publishedAt;
+    }
+
+    public void setPublishedAt(String publishedAt) {
+        this.publishedAt = publishedAt;
+    }
 
     public String getTitle() {
         return title;
@@ -25,13 +63,6 @@ public class News {
         this.title = title;
     }
 
-    public String getUrl() {
-        return URL;
-    }
-
-    public void setUrl(String url) {
-        this.URL = url;
-    }
 
     public String getUrlToImage() {
         return urlToImage;

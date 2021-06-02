@@ -23,10 +23,12 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.RecyclerViewHolder
 
     Context context;
     List<News> list;
+    OnNoteClickListener onNoteClickListener;
 
-    public RVadapter(Context context, List<News> list) {
+    public RVadapter(Context context, List<News> list,OnNoteClickListener onNoteClickListener) {
         this.context = context;
         this.list = list;
+        this.onNoteClickListener = onNoteClickListener;
     }
 
     @NonNull
@@ -35,7 +37,7 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.RecyclerViewHolder
 
         View view = LayoutInflater.from(context).inflate(R.layout.custom_item_list,parent,false);
 
-        return new RecyclerViewHolder(view);
+        return new RecyclerViewHolder(view,onNoteClickListener);
     }
 
     @Override
@@ -46,7 +48,7 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.RecyclerViewHolder
         holder.title.setText(listitem.getTitle());
 
         String stringMap = listitem.getUrlToImage();
-        Glide.with(context).load(stringMap).into(holder.news_img);
+        Glide.with(context).load(stringMap).centerCrop().into(holder.news_img);
 
     }
 
@@ -55,15 +57,28 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.RecyclerViewHolder
         return list.size();
     }
 
-    public static class RecyclerViewHolder extends ViewHolder{
+    public static class RecyclerViewHolder extends ViewHolder implements View.OnClickListener{
 
         TextView title;
         ImageView news_img;
+        OnNoteClickListener listener;
 
-        public RecyclerViewHolder(@NonNull View itemView) {
+        public RecyclerViewHolder(@NonNull View itemView,OnNoteClickListener listener) {
             super(itemView);
             title = itemView.findViewById(R.id.news_title);
             news_img = itemView.findViewById(R.id.news_img);
+            this.listener = listener;
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+            listener.onNoteClick(getAdapterPosition());
+
+        }
+    }
+
+    public interface OnNoteClickListener{
+        void onNoteClick(int position);
     }
 }
